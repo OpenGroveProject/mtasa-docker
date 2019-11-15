@@ -9,9 +9,10 @@ This is a dockerfile config to set up a MTA:SA Server on docker.
 ```bash
 docker pull ciber96/mtasa-docker
 docker run -it \
--p 22003:22003 \
+-p 22003:22003/udp \
 -p 22005:22005 \
--p 22126:22126 \
+-p 22126:22126/udp \
+--name mta-server \
 -d ciber96/mtasa-docker
 ```
 ## Contributing
